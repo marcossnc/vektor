@@ -47,6 +47,24 @@ function obter_aviso(): ?string
     return $aviso;
 }
 
+function lista_ufs(): array
+{
+    return ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
+}
+
+function lista_veiculos(): array
+{
+    return ['Caminhão baú', 'Carreta', 'Caminhão toco', 'Van', 'Utilitário'];
+}
+
+function capacidade_formatada(int $kg): string
+{
+    if ($kg >= 1000) {
+        return rtrim(rtrim(number_format($kg / 1000, 1, ',', '.'), '0'), ',') . ' t';
+    }
+    return $kg . ' kg';
+}
+
 function status_frete(string $status): array
 {
     $mapa = [
