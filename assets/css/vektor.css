@@ -271,6 +271,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .menu::after, .menu__rodape { display: none; }
   .menu__logo { width: 150px; margin: 0 16px 0 0; }
   .conteudo { padding: 20px 16px; }
+  .conteudo > header { flex-wrap: wrap; gap: 12px; }
+  .titulo { font-size: 20px; }
   .resumo-frete { position: static; }
   .cabecalho__acoes { gap: 12px; }
 }

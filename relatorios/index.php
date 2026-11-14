@@ -38,7 +38,8 @@ $consulta_dia = '?dia=' . urlencode($dia);
       </section>
       <section class="painel animar" style="--i:5">
         <h2 class="painel__titulo">Fretes de <?= data_br($dia) ?></h2>
-        <table class="tabela">
+        <div class="table-responsive">
+            <table class="tabela">
           <thead>
             <tr><th>Frete</th><th>Transportador</th><th>Rota</th><th>Itens</th><th>Peso</th><th>Valor</th></tr>
           </thead>
@@ -58,5 +59,6 @@ $consulta_dia = '?dia=' . urlencode($dia);
 <?php endif; ?>
           </tbody>
         </table>
+            </div>
       </section>
 <?php require __DIR__ . '/../includes/rodape.php'; ?>

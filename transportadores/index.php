@@ -43,6 +43,7 @@ $editando = $campo['id'] !== '' && (int) $campo['id'] > 0;
         <section class="col-12 col-lg-7 animar" style="--i:1">
           <div class="painel h-100">
             <h2 class="painel__titulo">Transportadores cadastrados</h2>
+            <div class="table-responsive">
             <table class="tabela tabela--cnpj">
               <thead>
                 <tr><th>ID</th><th>Nome</th><th>CNPJ</th><th>Veículo</th><th></th></tr>
@@ -62,6 +63,7 @@ $editando = $campo['id'] !== '' && (int) $campo['id'] > 0;
 <?php endif; ?>
               </tbody>
             </table>
+            </div>
           </div>
         </section>
         <section class="col-12 col-lg-5 animar" style="--i:2" id="formulario">
