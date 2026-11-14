@@ -25,6 +25,28 @@ function dia_semana(string $data): string
     return $nomes[(int) date('w', strtotime($data))];
 }
 
+function numero_para_float(string $texto): ?float
+{
+    $texto = trim($texto);
+    if (strpos($texto, ',') === false && preg_match('/^\d+\.\d{1,2}$/', $texto)) {
+        return (float) $texto;
+    }
+    $limpo = str_replace(',', '.', str_replace(['.', ' '], '', $texto));
+    return is_numeric($limpo) ? (float) $limpo : null;
+}
+
+function definir_aviso(string $texto): void
+{
+    $_SESSION['aviso'] = $texto;
+}
+
+function obter_aviso(): ?string
+{
+    $aviso = $_SESSION['aviso'] ?? null;
+    unset($_SESSION['aviso']);
+    return $aviso;
+}
+
 function status_frete(string $status): array
 {
     $mapa = [
