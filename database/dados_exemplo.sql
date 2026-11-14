@@ -10,18 +10,18 @@ INSERT INTO produtos (nome, peso, valor, descricao) VALUES
 ('Impressora laser', 9.20, 980.00, NULL);
 
 INSERT INTO enderecos (apelido, tipo, cep, logradouro, numero, complemento, cidade, uf) VALUES
-('Depósito Campinas', 'origem', '13010-000', 'Av. Brasil', '1200', NULL, 'Campinas', 'SP'),
-('Matriz São Paulo', 'origem', '01305-000', 'Rua Augusta', '450', NULL, 'São Paulo', 'SP'),
-('Loja Curitiba', 'destino', '80020-000', 'Rua XV de Novembro', '88', NULL, 'Curitiba', 'PR'),
-('Filial Londrina', 'destino', '86010-000', 'Av. Higienópolis', '300', NULL, 'Londrina', 'PR'),
-('Cliente Maringá', 'destino', '87013-000', 'Av. Colombo', '2100', NULL, 'Maringá', 'PR');
+('Depósito Cascavel', 'origem', '85810-000', 'Av. Brasil', '4500', NULL, 'Cascavel', 'PR'),
+('Matriz Cascavel', 'origem', '85801-000', 'Rua Souza Naves', '1850', NULL, 'Cascavel', 'PR'),
+('Loja Toledo', 'destino', '85900-000', 'Av. Parigot de Souza', '700', NULL, 'Toledo', 'PR'),
+('Filial Foz do Iguaçu', 'destino', '85851-000', 'Av. Brasil', '1500', NULL, 'Foz do Iguaçu', 'PR'),
+('Cliente Medianeira', 'destino', '85884-000', 'Av. Brasil', '2100', NULL, 'Medianeira', 'PR');
 
 INSERT INTO transportadores (nome, cnpj, telefone, veiculo, capacidade_kg, placa) VALUES
-('TransLog Express', '12.345.678/0001-90', '(41) 99999-0001', 'Caminhão baú', 12000, 'ABC-1D23'),
-('Rápido Sul', '23.456.789/0001-01', '(44) 99999-0002', 'Van', 1500, 'BCD-2E34'),
-('Cargas Brasil', '34.567.890/0001-12', '(41) 99999-0003', 'Carreta', 28000, 'CDE-3F45'),
-('Via Norte Logística', '45.678.901/0001-23', '(43) 99999-0004', 'Caminhão toco', 6000, 'DEF-4G56'),
-('Entrega Fácil', '56.789.012/0001-34', '(44) 99999-0005', 'Utilitário', 800, 'EFG-5H67');
+('TransLog Express', '12.345.678/0001-90', '(45) 99999-0001', 'Caminhão baú', 12000, 'ABC-1D23'),
+('Rápido Sul', '23.456.789/0001-01', '(45) 99999-0002', 'Van', 1500, 'BCD-2E34'),
+('Cargas Brasil', '34.567.890/0001-12', '(45) 99999-0003', 'Carreta', 28000, 'CDE-3F45'),
+('Via Norte Logística', '45.678.901/0001-23', '(45) 99999-0004', 'Caminhão toco', 6000, 'DEF-4G56'),
+('Entrega Fácil', '56.789.012/0001-34', '(45) 99999-0005', 'Utilitário', 800, 'EFG-5H67');
 
 INSERT INTO fretes (transportador_id, origem_id, destino_id, data_frete, status) VALUES
 (1, 1, 3, CURDATE(), 'em_transito'),
